@@ -389,7 +389,7 @@ def edit_artist_submission(artist_id):
   # TODO: take values from the form submitted, and update existing
   # artist record with ID <artist_id> using the new attributes
   try:
-    artist_data = Artist.query.filter_by(id==artist_id).first()
+    artist_data = Artist.query.filter_by(id=artist_id).first()
 
     artist_data.name = request.form.get('name')
     artist_data.city = request.form.get('city')
